@@ -1,0 +1,10 @@
+*{
+    scroll-behavior: smooth;
+}
+.homePage{
+    background-color: rgb(0, 0, 0);
+}
+
+.dashBoard{
+    background: rgb(11, 71, 120);
+}
