@@ -1,5 +1,6 @@
 require('dotenv').config();
 
+const compression = require('compression');
 const express = require('express');
 const expressLayouts = require('express-ejs-layouts');
 const methodOverride=require('method-override');
@@ -10,6 +11,7 @@ const MongoStore=require('connect-mongo');
 
 const app = express();
 const port = 5000 || process.env.PORT;
+app.use(compression());
 
 app.use(session({
     secret: 'keyboard cat',

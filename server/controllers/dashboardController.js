@@ -52,11 +52,11 @@ exports.dashboard = async(req,res)=>{
       {
         $project: {
           title: { $substr: ["$title", 0, 30] },
-          body: { $substr: ["$body", 0, 500] },
+          body: { $substr: ["$body", 0, 400] },
         },
       }
       ])
-    .skip(perPage * page - perPage)
+    .skip((perPage * page) - perPage)
     .limit(perPage)
     .exec(); 
 
